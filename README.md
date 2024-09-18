@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# Tic-Tac-Toe - React + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![App Screenshot](public/screen.png)
 
-Currently, two official plugins are available:
+## Описание
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Это классическая игра "Крестики-Нолики" с полем 3x3. Игроки поочередно ставят крестики и нолики на игровое поле, стараясь составить ряд из трёх одинаковых символов по горизонтали, вертикали или диагонали.
 
-## Expanding the ESLint configuration
+### Основные функции:
+- **Отображение текущего хода**: Игра отображает, чей сейчас ход — крестиков или ноликов.
+- **Результат игры**: После каждого хода проверяется, есть ли победитель или ничья, с соответствующим уведомлением.
+- **Перезапуск игры**: Возможность начать новую игру после завершения текущей.
+- **Анимации**: Приложение содержит анимации, добавленные с помощью Framer Motion, для плавных переходов и эффектов.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Использованные технологии
 
-- Configure the top-level `parserOptions` property like this:
+<p align="left">
+  <a href="https://react.dev/" target="_blank">
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  </a>
+  <a href="https://www.typescriptlang.org/" target="_blank">
+    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  </a>
+  <a href="https://vitejs.dev/" target="_blank">
+    <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  </a>
+  <a href="https://redux-toolkit.js.org/" target="_blank">
+    <img src="https://img.shields.io/badge/Redux--Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux Toolkit" />
+  </a>
+  <a href="https://styled-components.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Styled--Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" alt="Styled Components" />
+  </a>
+  <a href="https://www.framer.com/motion/" target="_blank">
+    <img src="https://img.shields.io/badge/Framer--Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+  </a>
+</p>
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Демо
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Приложение доступно по следующей ссылке:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+[Tic Tac Toe - gitHub Pages](https://blinklay.github.io/tic-tac-ts/)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Установка и запуск
+
+Для локального запуска выполните следующие шаги:
+
+1. Клонируйте репозиторий:
+
+    ```bash
+    git clone https://github.com/blinklay/tic-tac-ts.git
+    ```
+
+2. Перейдите в директорию проекта:
+
+    ```bash
+    cd tic-tac-ts
+    ```
+
+3. Установите зависимости:
+
+    ```bash
+    npm install
+    ```
+
+4. Запустите приложение:
+
+    ```bash
+    npm run dev
+    ```
+
+Приложение будет доступно по адресу `http://localhost:3000`.
+
