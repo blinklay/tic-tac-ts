@@ -41,6 +41,11 @@ export default function GameLayout() {
   const isGameEnded = useSelector(
     (state: RootState) => state.game.isGameEnded as boolean
   );
+  const isDraw = useSelector(
+    (state: RootState) => state.game.isDraw as boolean
+  );
+
+  const isEnd: boolean = isGameEnded || isDraw;
 
   return (
     <Layout>
@@ -53,7 +58,7 @@ export default function GameLayout() {
       </Title>
       <Information />
       <Field />
-      <Button onClick={() => dispatch(resetGame())} isGameEnded={isGameEnded}>
+      <Button onClick={() => dispatch(resetGame())} isGameEnded={isEnd}>
         Заново
       </Button>
     </Layout>
