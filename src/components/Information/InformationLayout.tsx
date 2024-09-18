@@ -7,7 +7,11 @@ interface InformationLayoutProps {
   winner: string;
 }
 
-const Information = styled.div``;
+const Information = styled.div`
+  font-size: 32px;
+  color: #fff;
+  font-weight: 700;
+`;
 const CurrentStep = styled.div``;
 const Winner = styled.div``;
 
@@ -20,10 +24,14 @@ export default function InformationLayout({
   return (
     <Information>
       {isGameEnded ? (
-        <Winner>Победитель: {winner}</Winner>
+        <Winner>Победитель: {winner === "x" ? "Крестик" : "Нолик"}</Winner>
       ) : (
         <CurrentStep>
-          {isDraw ? <div>Ничья!</div> : <p>Текущий ход: {currentPlayer}</p>}
+          {isDraw ? (
+            <div>Ничья!</div>
+          ) : (
+            <p>Текущий ход: {currentPlayer === "x" ? "Крестик" : "Нолик"}</p>
+          )}
         </CurrentStep>
       )}
     </Information>

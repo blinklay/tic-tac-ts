@@ -6,6 +6,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 1.2;
   font-size: 18px;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(156, 16, 254, 1) 0%, rgba(216, 1, 239, 1) 100%);
 }
 
 a {

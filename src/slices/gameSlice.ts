@@ -58,8 +58,15 @@ const gameSlice = createSlice({
 
       state.currentPlayer = state.currentPlayer === "x" ? "0" : "x";
     },
+    resetGame: (state) => {
+      state.winner = "";
+      state.currentPlayer = "x";
+      state.isGameEnded = false;
+      state.isDraw = false;
+      state.field = ["", "", "", "", "", "", "", "", ""];
+    },
   },
 });
 
-export const { changeField } = gameSlice.actions;
+export const { changeField, resetGame } = gameSlice.actions;
 export default gameSlice.reducer;
